@@ -11,8 +11,6 @@
 #include "NhanVien.h"
 #include "ThongKe.h"
 
-// Lớp trung gian (facade) giữa GUI và core. GUI chỉ cần tạo 1 đối tượng QuanCaPhe và gọi hàm của nó.
-
 // Quy ước:
 //  - Gọi taiDuLieu() một lần khi mở chương trình (lần đầu chưa có file sẽ tự tạo dữ liệu mẫu).
 //  - Hàm trả về bool: false = thất bại. Hàm trả về mã (int): -1 = thất bại.
@@ -47,12 +45,12 @@ private:
 public:
     QuanCaPhe(std::string thuMucDuLieu = "data");
 
-    // ===== Dữ liệu =====
+    //Dữ liệu
     bool taiDuLieu();
     bool luuDuLieu();
     std::string getLoiCuoi() const;
 
-    // ===== Đăng nhập / nhân viên =====
+    // Đăng nhập / nhân viên
     bool dangNhap(const std::string& tenDangNhap, const std::string& matKhau);
     void dangXuat();
     bool daDangNhap() const;
@@ -64,7 +62,7 @@ public:
     bool xoaNhanVien(const std::string& maNV);
     const std::vector<NhanVien>& getDanhSachNhanVien() const;
 
-    // ===== Menu =====
+    // Menu
     int themMon(const std::string& tenMon, const std::string& loai, double gia);   // trả về mã món mới
     bool suaMon(int maMon, const std::string& tenMon, const std::string& loai, double gia);
     bool xoaMon(int maMon);
@@ -73,7 +71,7 @@ public:
     bool xoaThanhPhan(int maMon, int maNL);
     const Menu& getMenu() const;
 
-    // ===== Kho nguyên liệu =====
+    // Kho
     int themNguyenLieu(const std::string& ten, const std::string& donVi, double soLuongTon, double mucToiThieu);
     bool suaNguyenLieu(int maNL, const std::string& ten, const std::string& donVi, double soLuongTon, double mucToiThieu);
     bool xoaNguyenLieu(int maNL);
@@ -82,7 +80,7 @@ public:
     std::vector<NguyenLieu> getNguyenLieuSapHet() const;
     int soPhanCoTheBan(int maMon) const;        // -1: món không theo dõi kho, 0: hết
 
-    // ===== Bàn =====
+    // Bàn
     int themBan(const std::string& tenBan, int soGhe);          // trả về mã bàn mới
     bool xoaBan(int maBan);
     bool datTruocBan(int maBan);
@@ -91,14 +89,14 @@ public:
     bool dongBan(int maBan);                                    // đóng bàn đã mở nhưng chưa gọi món
     const std::vector<Ban>& getDanhSachBan() const;
 
-    // ===== Gọi món / thanh toán =====
+    //Gọi món/hóa đơn
     bool goiMon(int maBan, int maMon, int soLuong);             // tự mở bàn nếu chưa mở; trừ kho ngay
     bool huyMon(int maBan, int maMon, int soLuong);             // trả lại kho
     const HoaDon* getHoaDonDangMo(int maBan) const;             // nullptr nếu bàn chưa có hóa đơn
     double tinhTienBan(int maBan, double giamGia, double vat) const;   // xem trước tổng tiền; -1 nếu không có hóa đơn
     bool thanhToan(int maBan, const std::string& hinhThuc, double giamGia, double vat);  // giamGia: số tiền, vat: %
 
-    // ===== Thống kê (chỉ tính hóa đơn đã thanh toán) =====
+    // Thống kê
     double doanhThuTheoNgay(const std::string& ngay) const;
     double doanhThuTheoThang(const std::string& thang) const;
     double doanhThuKhoangNgay(const std::string& tuNgay, const std::string& denNgay) const;
