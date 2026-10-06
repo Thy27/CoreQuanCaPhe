@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core 1"><UniqueIdentifier>{0f1e2d3c-4b5a-6978-8a9b-0c1d2e3f4011}</UniqueIdentifier></Filter>
+    <Filter Include="Core 2"><UniqueIdentifier>{0f1e2d3c-4b5a-6978-8a9b-0c1d2e3f4022}</UniqueIdentifier></Filter>
+    <Filter Include="TrungGianKetNoiCore"><UniqueIdentifier>{0f1e2d3c-4b5a-6978-8a9b-0c1d2e3f4033}</UniqueIdentifier></Filter>
+    <Filter Include="Kiểm thử"><UniqueIdentifier>{0f1e2d3c-4b5a-6978-8a9b-0c1d2e3f4044}</UniqueIdentifier></Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Ban.cpp"><Filter>Core 2</Filter></ClCompile>
+    <ClCompile Include="ChiTietHoaDon.cpp"><Filter>Core 2</Filter></ClCompile>
+    <ClCompile Include="HoaDon.cpp"><Filter>Core 2</Filter></ClCompile>
+    <ClCompile Include="Kho.cpp"><Filter>Core 1</Filter></ClCompile>
+    <ClCompile Include="LuuTru.cpp"><Filter>Core 1</Filter></ClCompile>
+    <ClCompile Include="Menu.cpp"><Filter>Core 1</Filter></ClCompile>
+    <ClCompile Include="Mon.cpp"><Filter>Core 1</Filter></ClCompile>
+    <ClCompile Include="NguyenLieu.cpp"><Filter>Core 1</Filter></ClCompile>
+    <ClCompile Include="NhanVien.cpp"><Filter>Core 2</Filter></ClCompile>
+    <ClCompile Include="QuanCaPhe.cpp"><Filter>TrungGianKetNoiCore</Filter></ClCompile>
+    <ClCompile Include="ThongKe.cpp"><Filter>Core 2</Filter></ClCompile>
+    <ClCompile Include="main.cpp"><Filter>Kiểm thử</Filter></ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ban.h"><Filter>Core 2</Filter></ClInclude>
+    <ClInclude Include="ChiTietHoaDon.h"><Filter>Core 2</Filter></ClInclude>
+    <ClInclude Include="HoaDon.h"><Filter>Core 2</Filter></ClInclude>
+    <ClInclude Include="Kho.h"><Filter>Core 1</Filter></ClInclude>
+    <ClInclude Include="LuuTru.h"><Filter>Core 1</Filter></ClInclude>
+    <ClInclude Include="Menu.h"><Filter>Core 1</Filter></ClInclude>
+    <ClInclude Include="Mon.h"><Filter>Core 1</Filter></ClInclude>
+    <ClInclude Include="NguyenLieu.h"><Filter>Core 1</Filter></ClInclude>
+    <ClInclude Include="NhanVien.h"><Filter>Core 2</Filter></ClInclude>
+    <ClInclude Include="QuanCaPhe.h"><Filter>TrungGianKetNoiCore</Filter></ClInclude>
+    <ClInclude Include="ThongKe.h"><Filter>Core 2</Filter></ClInclude>
+  </ItemGroup>
+</Project>
